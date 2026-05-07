@@ -1,0 +1,531 @@
+{
+  "site": {
+    "name": "Pratik Shetake",
+    "pronoun": "he/him",
+    "role": "Full-Stack Developer • Data Science & AI Enthusiast",
+    "location": "Maharashtra, India",
+    "locationLabel": "Building AI-powered products with scalable backend systems",
+    "footerLocation": "India",
+    "availability": "Open to internships, full-time opportunities, and AI collaborations",
+    "resumeUrl": "",
+    "coreLanes": ["web", "backend", "ai"]
+  },
+
+  "navigation": [
+    { "id": "hero", "label": "Home" },
+    { "id": "about", "label": "About" },
+    { "id": "stack", "label": "Stack" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "projects", "label": "Projects" },
+    { "id": "contact", "label": "Contact" }
+  ],
+
+  "socialLinks": [
+    {
+      "id": "github",
+      "label": "GitHub",
+      "href": "https://github.com/PRATIKSHETAKE",
+      "iconKey": "github"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/pratikshetake/",
+      "iconKey": "linkedin"
+    },
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp",
+      "href": "https://wa.me/917030032928",
+      "iconKey": "whatsapp"
+    }
+  ],
+
+  "hero": {
+    "kicker": "Building AI-powered full-stack systems with scalable architecture",
+
+    "headline": "Pratik Shetake",
+
+    "intro": "I build intelligent web applications, AI-driven platforms, and scalable backend systems focused on clean architecture, automation, and meaningful user experiences.",
+
+    "ctaButtons": [
+      {
+        "label": "View Projects",
+        "href": "#projects",
+        "variant": "primary",
+        "iconKey": "arrowDownRight"
+      },
+
+      {
+        "label": "Contact Me",
+        "href": "#contact",
+        "variant": "secondary",
+        "iconKey": "mail"
+      }
+    ],
+
+    "heroSocialLinkIds": ["linkedin", "github"],
+
+    "quickFacts": [
+      {
+        "label": "Current Focus",
+        "value": "Data Science & AI",
+        "detail": "Building AI-driven applications using LLMs and modern analytics."
+      },
+
+      {
+        "label": "Core Stack",
+        "value": "React, FastAPI, Python",
+        "detail": "Modern full-stack development with AI integrations."
+      },
+
+      {
+        "label": "Specialization",
+        "value": "AI + Full Stack",
+        "detail": "Combining intelligent workflows with scalable systems."
+      }
+    ],
+
+    "focusAreas": [
+      {
+        "title": "AI Applications",
+        "text": "Building LLM-powered systems and AI-driven workflows for analytics and automation."
+      },
+
+      {
+        "title": "Backend Systems",
+        "text": "Developing scalable APIs, secure architectures, and high-performance services."
+      },
+
+      {
+        "title": "Modern Frontend",
+        "text": "Designing responsive and interactive interfaces using React and Tailwind CSS."
+      }
+    ]
+  },
+
+  "about": {
+    "title": "AI-driven full-stack systems with modern engineering.",
+
+    "copy": "Passionate about building intelligent applications using AI, machine learning, and scalable web technologies. I enjoy combining backend engineering, data systems, and modern frontend experiences to create products that feel polished and production-ready.",
+
+    "principles": [
+      {
+        "title": "Scalable Systems",
+        "text": "Designing maintainable backend architectures and REST APIs for production-ready applications.",
+
+        "iconKey": "building"
+      },
+
+      {
+        "title": "AI & Machine Learning",
+        "text": "Integrating LLMs, data analytics, and intelligent workflows into modern software products.",
+
+        "iconKey": "brain"
+      },
+
+      {
+        "title": "Frontend Experience",
+        "text": "Creating smooth, responsive, and interactive user experiences with modern UI frameworks.",
+
+        "iconKey": "layout"
+      }
+    ],
+
+    "capabilities": [
+      "Building AI-powered full-stack applications.",
+      "Developing scalable REST APIs and backend systems.",
+      "Integrating LLM workflows and analytics.",
+      "Creating interactive React applications.",
+      "Designing cloud-ready architectures."
+    ]
+  },
+
+  "stack": {
+    "title": "Technologies, AI frameworks, cloud systems, and engineering tools.",
+
+    "copy": "A combination of full-stack engineering, AI/ML tooling, cloud infrastructure, big data technologies, and scalable deployment systems.",
+
+    "sections": [
+      {
+        "category": "Programming Languages",
+
+        "description": "Core programming and scripting languages",
+
+        "items": [
+          { "label": "Python", "iconKey": "python" },
+          { "label": "Java", "iconKey": "java" },
+          { "label": "C", "iconKey": "c" },
+          { "label": "HTML", "iconKey": "html" },
+          { "label": "CSS", "iconKey": "css" },
+          { "label": "JavaScript", "iconKey": "javascript" },
+          { "label": "SQL", "iconKey": "sql" },
+          { "label": "Bash", "iconKey": "bash" }
+        ]
+      },
+
+      {
+        "category": "AI / Machine Learning",
+
+        "description": "Libraries and frameworks for AI, ML, and analytics",
+
+        "items": [
+          { "label": "Scikit-Learn", "iconKey": "scikitlearn" },
+          { "label": "Matplotlib", "iconKey": "matplotlib" },
+          { "label": "Seaborn", "iconKey": "seaborn" },
+          { "label": "NumPy", "iconKey": "numpy" },
+          { "label": "Pandas", "iconKey": "pandas" },
+          { "label": "Plotly", "iconKey": "plotly" },
+          { "label": "TensorFlow", "iconKey": "tensorflow" },
+          { "label": "PyTorch", "iconKey": "pytorch" },
+          { "label": "YOLO", "iconKey": "yolo" }
+        ]
+      },
+
+      {
+        "category": "Cloud & Data Engineering",
+
+        "description": "Cloud platforms and enterprise data engineering systems",
+
+        "items": [
+          { "label": "Azure Cloud", "iconKey": "azure" },
+          { "label": "AWS", "iconKey": "aws" },
+          { "label": "Azure DataBricks", "iconKey": "databricks" },
+          { "label": "Azure Data Factory", "iconKey": "datafactory" },
+          { "label": "Azure Synapse Analytics", "iconKey": "synapse" },
+          { "label": "Azure Stream Analytics", "iconKey": "streamanalytics" },
+          { "label": "Azure IoT Hub", "iconKey": "iothub" },
+          { "label": "Microsoft Fabric", "iconKey": "fabric" }
+        ]
+      },
+
+      {
+        "category": "Big Data Technologies",
+
+        "description": "Distributed systems, streaming, and big data processing",
+
+        "items": [
+          { "label": "Hadoop DFS", "iconKey": "hadoop" },
+          { "label": "Sqoop", "iconKey": "sqoop" },
+          { "label": "Hive", "iconKey": "hive" },
+          { "label": "Apache NiFi", "iconKey": "nifi" },
+          { "label": "Kafka", "iconKey": "kafka" },
+          { "label": "Apache Spark", "iconKey": "spark" },
+          { "label": "PySpark", "iconKey": "pyspark" },
+          { "label": "Scala", "iconKey": "scala" },
+          { "label": "Cassandra", "iconKey": "cassandra" }
+        ]
+      },
+
+      {
+        "category": "Deployment & DevOps",
+
+        "description": "Deployment platforms, containers, and DevOps tooling",
+
+        "items": [
+          { "label": "Render", "iconKey": "render" },
+          { "label": "Vercel", "iconKey": "vercel" },
+          { "label": "Docker", "iconKey": "docker" },
+          { "label": "Git", "iconKey": "git" },
+          { "label": "Kubernetes", "iconKey": "kubernetes" }
+        ]
+      },
+
+      {
+        "category": "Developer Tools & Platforms",
+
+        "description": "Development environments and productivity tools",
+
+        "items": [
+          { "label": "Windows", "iconKey": "windows" },
+          { "label": "Linux", "iconKey": "linux" },
+          { "label": "Visual Studio Code", "iconKey": "vscode" },
+          { "label": "Jupyter Notebook", "iconKey": "jupyter" },
+          { "label": "Docker Desktop", "iconKey": "dockerdesktop" },
+          { "label": "GitHub", "iconKey": "github" }
+        ]
+      },
+
+      {
+        "category": "AI Tools & LLM Ecosystem",
+
+        "description": "Modern AI assistants, LLM workflows, and generative AI",
+
+        "items": [
+          { "label": "Gemini", "iconKey": "gemini" },
+          { "label": "ChatGPT", "iconKey": "chatgpt" },
+          { "label": "Claude", "iconKey": "claude" },
+          { "label": "LLMs", "iconKey": "llm" },
+          { "label": "RAG", "iconKey": "rag" },
+          { "label": "Deep Learning", "iconKey": "deeplearning" },
+          { "label": "Machine Learning", "iconKey": "machinelearning" },
+          { "label": "Data Science", "iconKey": "datascience" },
+          { "label": "Data Analytics", "iconKey": "dataanalytics" }
+        ]
+      }
+    ]
+  },
+
+  "experienceSection": {
+    "title": "Learning through real-world engineering and AI systems.",
+
+    "copy": "Focused on combining data science, software engineering, and modern AI architecture through projects and hands-on development."
+  },
+
+  "experiences": [
+    {
+      "period": "2025 - Present",
+
+      "type": "Education",
+
+      "title": "KITCOEK",
+
+      "role": "Recent Graduate • Data Science Learner",
+
+      "summary": "Focused on AI, machine learning, full-stack engineering, and scalable analytics systems.",
+
+      "focus": [
+        "AI & ML",
+        "Data Engineering",
+        "Full-Stack Development"
+      ]
+    }
+  ],
+
+  "certificationsSection": {
+    "title": "Certifications & Continuous Learning",
+
+    "copy": "Focused on AI, cloud systems, backend engineering, and modern software architecture through practical certifications and hands-on learning."
+  },
+
+  "certifications": [
+    {
+      "title": "Azure Data Engineer Master Class",
+
+      "issuer": "Udemy",
+
+      "year": "2025",
+
+      "description": "Data engineering concepts, Azure services, ETL workflows, and cloud-based analytics systems.",
+
+      "href": "",
+
+      "display": true
+    },
+
+    {
+      "title": "Machine Learning & AI Fundamentals",
+
+      "issuer": "Online Learning",
+
+      "year": "2025",
+
+      "description": "Core concepts of machine learning, model workflows, and AI-powered systems.",
+
+      "href": "",
+
+      "display": true
+    },
+
+    {
+      "title": "React & Modern Frontend Development",
+
+      "issuer": "Online Learning",
+
+      "year": "2024",
+
+      "description": "Building scalable frontend applications using React, Tailwind CSS, and modern UI practices.",
+
+      "href": "",
+
+      "display": true
+    },
+
+    {
+      "title": "FastAPI Backend Development",
+
+      "issuer": "Online Learning",
+
+      "year": "2025",
+
+      "description": "REST APIs, scalable backend systems, authentication, and Python backend engineering.",
+
+      "href": "",
+
+      "display": true
+    }
+  ],
+
+  "projectsSection": {
+    "title": "Projects focused on AI, analytics, and scalable architecture.",
+
+    "copy": "A collection of AI-powered applications, analytics systems, and modern full-stack projects built with practical engineering approaches."
+  },
+
+  "projects": [
+    {
+      "title": "Querylytics AI",
+
+      "category": "AI-powered analytics platform",
+
+      "year": "2026",
+
+      "imageKey": "querylytics",
+
+      "summary": "An AI-powered private analytics platform that allows users to upload datasets and generate insights through natural language conversations.",
+
+      "challenge": "Create a secure analytics workflow without exposing sensitive data directly to LLMs.",
+
+      "delivery": "Built a secure architecture using React, FastAPI, Gemini AI, LangChain, ChromaDB, and Plotly for intelligent analytics and visualizations.",
+
+      "impact": "Demonstrated how AI can simplify data exploration while maintaining privacy and scalable architecture.",
+
+      "stack": [
+        "React",
+        "Tailwind CSS",
+        "FastAPI",
+        "Python",
+        "Gemini AI",
+        "LangChain",
+        "ChromaDB",
+        "Plotly"
+      ],
+
+      "metrics": [
+        "AI-powered analytics",
+        "Secure architecture",
+        "Interactive visualizations"
+      ],
+
+      "githubRepo": "",
+
+      "liveDemo": ""
+    },
+    {
+      "title": "Self-Driving Car Environment Perception",
+
+      "category": "Computer Vision & Autonomous Systems",
+
+      "year": "2025",
+
+      "imageKey": "self_driving_ai",
+
+      "summary": "An AI-powered environment perception system for autonomous vehicles using computer vision and deep learning techniques on the KITTI dataset.",
+
+      "challenge": "Build a reliable perception pipeline capable of identifying road objects, understanding driving environments, and improving detection accuracy using transfer learning.",
+
+      "delivery": "Implemented object detection and semantic segmentation workflows using YOLOv26 and ResNet-50 with transfer learning on the KITTI 4K dataset.",
+
+      "impact": "Achieved 87% model accuracy while improving object recognition and scene understanding for autonomous driving environments.",
+
+      "stack": [
+        "Python",
+        "YOLOv26",
+        "ResNet-50",
+        "TensorFlow",
+        "PyTorch",
+        "Computer Vision",
+        "Deep Learning",
+        "Transfer Learning"
+      ],
+
+      "metrics": [
+        "87% model accuracy",
+        "Object detection",
+        "Semantic segmentation",
+        "Transfer learning pipeline"
+      ],
+
+      "githubRepo": "",
+
+      "liveDemo": ""
+    }
+  ],
+  "contact": {
+    "title": "Let’s build intelligent systems together.",
+
+    "copy": "Open to collaborations, software engineering opportunities, AI projects, and innovative product ideas.",
+
+    "contactItems": [
+      {
+        "label": "Email",
+
+        "value": "work.pratikshetake@gmail.com",
+
+        "href": "mailto:work.pratikshetake@gmail.com",
+
+        "iconKey": "mail"
+      },
+
+      {
+        "label": "Phone",
+
+        "value": "+91 7030032928",
+
+        "href": "tel:+917030032928",
+
+        "iconKey": "phone"
+      },
+
+      {
+        "label": "WhatsApp",
+
+        "value": "+91 7030032928",
+
+        "href": "https://wa.me/917030032928",
+
+        "iconKey": "whatsapp"
+      },
+
+      {
+        "label": "GitHub",
+
+        "value": "PRATIKSHETAKE",
+
+        "href": "https://github.com/PRATIKSHETAKE",
+
+        "iconKey": "github"
+      },
+
+      {
+        "label": "LinkedIn",
+
+        "value": "Pratik Shetake",
+
+        "href": "https://www.linkedin.com/in/pratikshetake/",
+
+        "iconKey": "linkedin"
+      }
+    ],
+
+    "form": {
+      "label": "Contact Form",
+
+      "title": "Start a conversation",
+
+      "copy": "Tell me about your project, opportunity, or collaboration idea.",
+
+      "fields": {
+        "nameLabel": "Name",
+
+        "namePlaceholder": "Your full name",
+
+        "emailLabel": "Email",
+
+        "emailPlaceholder": "name@email.com",
+
+        "messageLabel": "Message",
+
+        "messagePlaceholder": "Tell me about your project or idea."
+      },
+
+      "submitLabel": "Send Message",
+
+      "sendingLabel": "Sending...",
+
+      "successMessage": "Message sent successfully.",
+
+      "errorMessage": "Something went wrong. Please try again later."
+    }
+  }
+}
