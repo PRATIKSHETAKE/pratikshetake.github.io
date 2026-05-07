@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
-
 import portfolio from "./data/portfolio.json";
-
 import {
     FaGithub,
     FaLinkedin,
     FaWhatsapp,
     FaPhone,
 } from "react-icons/fa";
-
 import { MdEmail } from "react-icons/md";
+import logo from "./assets/logo.png";
 
 const iconMap = {
     github: FaGithub,
@@ -82,9 +80,17 @@ export default function App() {
 
             {/* Navbar */}
             <nav className="sticky top-0 z-50 backdrop-blur-2xl bg-black/20 border-b border-white/10 px-8 md:px-16 py-6 flex justify-between items-center">
-                <h1 className="text-xl font-black tracking-[0.35em]">
-                    {portfolio.site?.name}
-                </h1>
+                <div className="flex items-center gap-4">
+                    <img
+                        src={logo}
+                        alt="PS Logo"
+                        className="w-12 h-12 rounded-2xl object-cover"
+                    />
+
+                    <h1 className="text-xl font-black tracking-[0.25em]">
+                        {portfolio.site?.name}
+                    </h1>
+                </div>
 
                 <div className="hidden md:flex gap-10 text-sm text-zinc-300">
                     {portfolio.navigation?.map((item) => (
