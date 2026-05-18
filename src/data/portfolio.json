@@ -178,7 +178,12 @@
           { "label": "Plotly", "iconKey": "plotly" },
           { "label": "TensorFlow", "iconKey": "tensorflow" },
           { "label": "PyTorch", "iconKey": "pytorch" },
-          { "label": "YOLO", "iconKey": "yolo" }
+          { "label": "YOLO", "iconKey": "yolo" },
+          { "label": "LangChain", "iconKey": "langchain" },
+          { "label": "LangGraph", "iconKey": "langgraph" },
+          { "label": "ChromaDB", "iconKey": "chromadb" },
+          { "label": "PineCone", "iconKey": "pinecone" },
+          { "label": "Weaviate", "iconKey": "Weaviate" }
         ]
       },
 
