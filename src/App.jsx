@@ -24,6 +24,7 @@ export default function App() {
     });
 
     const [hovering, setHovering] = useState(false);
+    const [timelineProgress, setTimelineProgress] = useState(0);
 
     useEffect(() => {
         const mouseMove = (e) => {
@@ -38,6 +39,26 @@ export default function App() {
         return () => {
             window.removeEventListener("mousemove", mouseMove);
         };
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const container = document.getElementById("experience-container");
+            if (!container) return;
+            const rect = container.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            const scrollDistance = rect.height + windowHeight * 0.2;
+            const scrolled = windowHeight * 0.7 - rect.top;
+            const progress = (scrolled / scrollDistance) * 100;
+            
+            setTimelineProgress(Math.min(100, Math.max(0, progress)));
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        // Run once initially to set correct state
+        setTimeout(handleScroll, 100);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
@@ -274,9 +295,20 @@ export default function App() {
                     {portfolio.experienceSection?.copy}
                 </p>
 
-                <div className="relative space-y-12">
-                    {/* Vertical Line */}
-                    <div className="absolute left-2 md:-left-10 top-2 bottom-2 w-0.5 bg-gradient-to-b from-cyan-500/40 via-violet-500/20 to-zinc-800/10" />
+                <div id="experience-container" className="relative pl-12 md:pl-16 space-y-12">
+                    {/* Vertical Line Track */}
+                    <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-zinc-800">
+                        {/* Active Progress Line */}
+                        <div 
+                            className="w-full bg-gradient-to-b from-cyan-400 via-cyan-300 to-violet-500 shadow-[0_0_12px_rgba(34,211,238,0.7)] transition-all duration-300 ease-out origin-top"
+                            style={{ height: `${timelineProgress}%` }}
+                        />
+                        {/* Glowing Bead at the tip */}
+                        <div 
+                            className="absolute left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,1),0_0_30px_rgba(34,211,238,0.8)] transition-all duration-300 ease-out z-20 pointer-events-none -translate-y-1/2"
+                            style={{ top: `${timelineProgress}%` }}
+                        />
+                    </div>
 
                     {portfolio.experiences?.map((exp, index) => {
                         const badgeColorMap = {
@@ -285,28 +317,41 @@ export default function App() {
                             Leadership: "text-amber-400 bg-amber-400/10 border-amber-400/20",
                         };
                         const badgeClass = badgeColorMap[exp.type] || "text-zinc-400 bg-zinc-400/10 border-zinc-400/20";
+                        const isReached = timelineProgress >= (index / (portfolio.experiences.length - 1)) * 95;
 
                         return (
                             <div
                                 key={index}
-                                className="relative pl-10 md:pl-0 group"
+                                className="relative group"
                             >
                                 {/* Glowing Dot */}
-                                <div className="absolute left-[-2px] md:-left-[50px] top-3 w-5 h-5 rounded-full bg-zinc-950 border-2 border-zinc-700 group-hover:border-cyan-400 group-hover:scale-110 transition-all duration-500 z-10 flex items-center justify-center animate-pulse-glow">
+                                <div className={`absolute left-[-48px] md:-left-[64px] top-2 w-8 h-8 rounded-full border-2 transition-all duration-700 ease-out z-10 flex items-center justify-center ${
+                                    isReached
+                                        ? "bg-zinc-950 border-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.6)] animate-pulse-glow"
+                                        : "bg-zinc-900 border-zinc-700"
+                                }`}>
                                     {/* Pulse Ping Wave */}
-                                    <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping opacity-75 pointer-events-none" style={{ animationDuration: '3s' }} />
+                                    {isReached && (
+                                        <div className="absolute inset-0 rounded-full bg-cyan-400/20 animate-ping opacity-75 pointer-events-none" style={{ animationDuration: '2.5s' }} />
+                                    )}
                                     {/* Core Dot */}
-                                    <div className="w-1.5 h-1.5 rounded-full bg-zinc-600 group-hover:bg-cyan-400 group-hover:scale-125 transition-all duration-500" />
+                                    <div className={`w-2 h-2 rounded-full transition-all duration-500 ${
+                                        isReached ? "bg-cyan-400 scale-110" : "bg-zinc-600"
+                                    }`} />
                                 </div>
 
-                                {/* Timeline Line Glow effect */}
-                                <div className="absolute left-[7px] md:-left-[41px] top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
+                                {/* Timeline Line Segment Glow effect on Hover */}
+                                <div className="absolute left-[-48px] md:-left-[64px] top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
 
                                 {/* Card */}
                                 <div
-                                    onMouseEnter={() => setHovering(true)}
-                                    onMouseLeave={() => setHovering(false)}
-                                    className="relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[28px] p-8 hover:border-cyan-400/40 hover:-translate-y-1.5 hover:shadow-[0_0_60px_rgba(34,211,238,0.15)] transition-all duration-500"
+                                    onMouseEnter={() => isReached && setHovering(true)}
+                                    onMouseLeave={() => isReached && setHovering(false)}
+                                    className={`relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[28px] p-8 transition-all duration-700 ease-out ${
+                                        isReached
+                                            ? "opacity-100 translate-y-0 hover:border-cyan-400/40 hover:-translate-y-1.5 hover:shadow-[0_0_60px_rgba(34,211,238,0.15)] cursor-pointer"
+                                            : "opacity-25 translate-y-4 pointer-events-none"
+                                    }`}
                                 >
                                     <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                                         <div>
