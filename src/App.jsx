@@ -257,6 +257,91 @@ export default function App() {
                 </div>
             </section>
 
+            {/* Experience / Timeline */}
+            <section
+                id="experience"
+                className="px-8 md:px-20 py-28 border-t border-white/10"
+            >
+                <p className="uppercase tracking-[0.35em] text-cyan-400 text-sm mb-6">
+                    Experience
+                </p>
+
+                <h2 className="text-5xl md:text-6xl font-black mb-8">
+                    {portfolio.experienceSection?.title}
+                </h2>
+
+                <p className="text-zinc-400 text-lg max-w-4xl mb-20">
+                    {portfolio.experienceSection?.copy}
+                </p>
+
+                <div className="relative border-l-2 border-zinc-800 ml-4 md:ml-12 pl-8 md:pl-16 space-y-12">
+                    {portfolio.experiences?.map((exp, index) => {
+                        const badgeColorMap = {
+                            Professional: "text-violet-400 bg-violet-400/10 border-violet-400/20",
+                            Education: "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
+                            Leadership: "text-amber-400 bg-amber-400/10 border-amber-400/20",
+                        };
+                        const badgeClass = badgeColorMap[exp.type] || "text-zinc-400 bg-zinc-400/10 border-zinc-400/20";
+
+                        return (
+                            <div
+                                key={index}
+                                className="relative group"
+                            >
+                                {/* Glowing Dot */}
+                                <div className="absolute -left-[41px] md:-left-[73px] top-2.5 w-6 h-6 rounded-full bg-zinc-900 border-4 border-zinc-800 group-hover:border-cyan-400 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(34,211,238,0.8)] transition-all duration-500 z-10 flex items-center justify-center">
+                                    <div className="w-2.5 h-2.5 rounded-full bg-zinc-700 group-hover:bg-cyan-400 transition-all duration-500" />
+                                </div>
+
+                                {/* Timeline Line Glow effect */}
+                                <div className="absolute -left-[41px] md:-left-[73px] top-8 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
+
+                                {/* Card */}
+                                <div
+                                    onMouseEnter={() => setHovering(true)}
+                                    onMouseLeave={() => setHovering(false)}
+                                    className="relative bg-white/5 border border-white/10 backdrop-blur-xl rounded-[28px] p-8 hover:border-cyan-400/40 hover:-translate-y-1.5 hover:shadow-[0_0_60px_rgba(34,211,238,0.15)] transition-all duration-500"
+                                >
+                                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                        <div>
+                                            <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${badgeClass} mb-3`}>
+                                                {exp.type}
+                                            </span>
+                                            <h3 className="text-3xl font-black tracking-tight text-white group-hover:text-cyan-300 transition-colors duration-300">
+                                                {exp.title}
+                                            </h3>
+                                            <p className="text-zinc-400 font-medium text-lg mt-1">
+                                                {exp.role}
+                                            </p>
+                                        </div>
+                                        <div className="text-zinc-500 font-semibold text-lg md:text-right shrink-0">
+                                            {exp.period}
+                                        </div>
+                                    </div>
+
+                                    <p className="text-zinc-400 leading-relaxed text-lg mb-6">
+                                        {exp.summary}
+                                    </p>
+
+                                    {exp.focus && exp.focus.length > 0 && (
+                                        <div className="flex flex-wrap gap-2.5">
+                                            {exp.focus.map((tech, techIndex) => (
+                                                <span
+                                                    key={techIndex}
+                                                    className="px-3.5 py-1.5 rounded-xl bg-white/5 border border-white/5 text-sm text-zinc-300 font-medium group-hover:border-cyan-400/20 group-hover:bg-cyan-400/5 transition-all duration-500"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </section>
+
             {/* Certifications */}
             <section
                 id="certifications"

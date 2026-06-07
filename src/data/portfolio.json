@@ -280,20 +280,67 @@
   "experiences": [
     {
       "period": "2025 - Present",
-
+      "type": "Professional",
+      "title": "Cravita Technology Pvt. Ltd.",
+      "role": "AI Developer",
+      "summary": "Building AI-driven workflows, integrating LLMs, and developing intelligent software products.",
+      "focus": ["AI & ML", "LLM Integration", "Python"]
+    },
+    {
+      "period": "2025",
       "type": "Education",
-
-      "title": "KITCOEK",
-
-      "role": "Recent Graduate • Data Science Learner",
-
-      "summary": "Focused on AI, machine learning, full-stack engineering, and scalable analytics systems.",
-
-      "focus": [
-        "AI & ML",
-        "Data Engineering",
-        "Full-Stack Development"
-      ]
+      "title": "Kolhapur Institute of Technology, College of Engineering (KITCOEK)",
+      "role": "B.E. Student",
+      "summary": "Graduated with 6.88 CGPA. Focused on Computer Science, Data Science, and Software Engineering.",
+      "focus": ["Data Science", "Computer Engineering"]
+    },
+    {
+      "period": "2024",
+      "type": "Leadership",
+      "title": "ACADS KITCOEK",
+      "role": "Advisory Board Member",
+      "summary": "Provided strategic advice and guidance to the student association, helping organize tech events and design initiatives.",
+      "focus": ["Mentorship", "Strategy"]
+    },
+    {
+      "period": "2023",
+      "type": "Leadership",
+      "title": "E-Cell KITCOEK (National Level Student Club)",
+      "role": "Film and Media Head",
+      "summary": "Led the film and media production team for the national-level entrepreneurship cell, managing promotional content and event coverage.",
+      "focus": ["Media Production", "Leadership"]
+    },
+    {
+      "period": "2023",
+      "type": "Leadership",
+      "title": "ACADS KITCOEK",
+      "role": "Design Head",
+      "summary": "Directed the design team for the student association, overseeing all visual branding, posters, and digital assets.",
+      "focus": ["Graphic Design", "Team Management"]
+    },
+    {
+      "period": "2022",
+      "type": "Leadership",
+      "title": "ACADS KITCOEK (Student Association)",
+      "role": "Design Associate",
+      "summary": "Collaborated on graphic design assets and promotional materials for college events and student initiatives.",
+      "focus": ["Visual Design", "Collaboration"]
+    },
+    {
+      "period": "2021",
+      "type": "Education",
+      "title": "Shri Balwantrao Zele Highschool",
+      "role": "High School Student",
+      "summary": "Completed secondary education with 95%.",
+      "focus": ["Science", "Mathematics"]
+    },
+    {
+      "period": "2019",
+      "type": "Education",
+      "title": "Radhabai Shinde English Medium School",
+      "role": "Secondary School Student",
+      "summary": "Completed school education with 84%.",
+      "focus": ["General Curriculum"]
     }
   ],
 
