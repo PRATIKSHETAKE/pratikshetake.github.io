@@ -106,3 +106,18 @@ body {
 .animate-float-fast {
   animation: floatFast 10s ease-in-out infinite;
 }
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.35), inset 0 0 4px rgba(34, 211, 238, 0.15);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 22px rgba(34, 211, 238, 0.75), inset 0 0 8px rgba(34, 211, 238, 0.35);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
